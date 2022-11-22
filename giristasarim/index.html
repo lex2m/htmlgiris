@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaste</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f30e8168c4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Sign Up</h1>
+            <form>
+                <div class="input-group">
+                    <div class="input-field" id="name">
+                        <i class="fa-regular fa-user"></i>
+                        <input type="text" id="namaste" placeholder="Name">
+                    </div>
+
+                    <div class="input-field">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input type="email" id="email" placeholder="E-Mail">
+                    </div>
+
+                    <div class="input-field" id="pw">
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <p><i class="fa-solid fa-shield-halved"></i> Forgot Password <a href="#" id="fp">Click Here!</a></p>
+                </div>
+                <div class="btn">
+                    <button type="button" id="signup">Sign Up</button>
+                    <button type="button" class="dc" id="signin">Sign In</button> <br>
+                   
+                </div> 
+            
+                <button type="button" class="login" id="login">Register</button>
+            </form>
+        </div>
+    </div>
+
+
+<script>
+
+    let signup = document.getElementById("signup");
+    let signin = document.getElementById("signin");
+    let title = document.getElementById("title");
+    let name = document.getElementById("name");
+    let fp = document.getElementById("fp");
+    let pw = document.getElementById("pw"); 
+    let namaste = document.getElementById("namaste"); 
+    let email = document.getElementById("email"); 
+    let login = document.getElementById("login"); 
+    
+
+    signin.onclick = function(){
+        name.style.maxHeight = "0";
+        pw.style.maxHeight = "65px";
+        title.innerHTML = "Sign In";
+
+        signin.classList.remove("dc");
+        signup.classList.add("dc"); 
+        
+        login.innerHTML = "Log In";
+        
+    }
+    signup.onclick = function(){
+        name.style.maxHeight = "65px";
+        pw.style.maxHeight = "65px";
+        title.innerHTML = "Sign Up";
+        
+        signup.classList.remove("dc");
+        signin.classList.add("dc");  
+
+        login.innerHTML = "Register";
+    }
+    
+    fp.onclick = function(){
+        name.style.maxHeight = "0";
+        pw.style.maxHeight = "0";
+        title.innerHTML = "Forgot Password";
+        
+        login.innerHTML = "Send Code";
+
+    }
+    
+    login.onclick = function(){
+
+        var metin=document.getElementById("namaste").value;
+        var metin2=document.getElementById("email").value;
+        alert("Welcome, "+metin+" Please Check Your E-Mail.");
+    
+        
+    }
+
+</script>
+
+</body>
+</html>
